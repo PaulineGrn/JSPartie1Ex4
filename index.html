@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8"/>
+  <title>JSPartie1Ex4</title>
+</head>
+<body>
+  <!-- création formulaire -->
+  <form>
+    <!-- création block formulaire -->
+    <fieldset class="identityInfo">
+<!-- Liste ordonée -->
+      <ol>
+        <li>
+          <!-- label pour definir le nom de la première ligne -->
+          <label for="lastname">Nom : </label>
+          <!-- imput pour le type et l'id -->
+          <input type="text" name="lastname" placeholder="Nom" id="lastname"/>
+        </li>
+        <li>
+          <label for="firstname">Prénom : </label>
+          <input type="text" name="firstname" placeholder="Prénom" id="firstname"/>
+        </li>
+        <li>
+          <label for="city">Ville : </label>
+          <input type="text" name="city" placeholder="Ville" id="city"/>
+        </li>
+        <!-- Création bouton JS -->
+        <button onclick="myFunction()">Click me</button>
+      </form>
+      <script>
+      //Récupération des informations du formulaire
+      function myFunction(){
+        //getElementById permet de stocker les valeurs du formulaire. ".value" pour recuperer la valeur de ton ID
+        var firstname=document.getElementById("firstname").value;
+        var lastname=document.getElementById("lastname").value;
+        var city=document.getElementById("city").value;
+        alert("Nom : " + lastname + "\nPrénom : " + firstname + "\nVille : " + city)
+      }
+      </script>
+    </body>
+    </html>
